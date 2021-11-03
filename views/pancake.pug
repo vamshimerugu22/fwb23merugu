@@ -2,3 +2,14 @@ extends layout
 
 block content
   h1= title
+  - var results = [{pancake_type: "Scotch Pancakes",price: 21,toppings:"maple syrup"},{pancake_type: "Russian Blinis",price: 27,toppings:" fresh fruit"},{pancake_type: "Irish Boxty",price: 30,toppings:"whipped cream"}];
+   div(class = "container-fluid")
+    div(class = "row")
+     each form in results
+        div(class="col-sm-4") pancake-type: #{form.pancake_type} 
+        br
+        br 
+        div(class="col-sm-4") price: #{form.price}
+        br
+        br  
+        div(class="col-sm-4") toppings: #{form.toppings}
